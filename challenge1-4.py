@@ -52,7 +52,7 @@ def check(s):
     return pos,max_val,check_string
 
 
-f_in= open("file.txt",'r')
+f_in= open("file1-4.txt",'r')
 f_out = open("ans.txt",'w')
 
 final_max = 0
