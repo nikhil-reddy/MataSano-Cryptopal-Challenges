@@ -1,14 +1,11 @@
 import binascii
 import base64
-from Crytpo.Cipher import AES
+from Crypto.Cipher import AES
 
-f_in = open("file1-7.txt",'r')
+f_in = open('file1-7.txt', 'r')
+ciphertext = base64.b64decode(f_in.read())
 
-cipher_text = base64.b64decode(open(f_in.read())
-
-
-key = '0'+bin(int(binascii.hexlify("YELLOW SUBMARINE"),16))[2:]
-key_cipher = AES.new(key, AES>MODE_ECB)
-ans =key_cipher.decrypt(x)
-
+key = b'YELLOW SUBMARINE'
+key_cipher = AES.new(key, AES.MODE_ECB)
+ans = key_cipher.decrypt(ciphertext)
 print ans
