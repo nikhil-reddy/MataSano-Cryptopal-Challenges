@@ -4,7 +4,8 @@ def PKCS7(text):
 	k = 20
 	val = k-(l % k)
 	for i in xrange(val):
-		text += '/0x4'
+		text += '/'
+		text += str(hex(val))
 
 	return text
 
